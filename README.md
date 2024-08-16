@@ -14,4 +14,4 @@ Você pode usar uma API como WeatherAPI para buscar dados meteorológicos e exib
 **HTML** (linguagem de marcação), **CSS** (linguagem de estilo), **JAVASCRIPT** (linguagem de script) e **VUE** (framework JavaScript).
 
 #### Licença
-Este projeto é distribuído sob a licença Boost Software License 1.0. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+* Este projeto é distribuído sob a licença Boost Software License 1.0. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
