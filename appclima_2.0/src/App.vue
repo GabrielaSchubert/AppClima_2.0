@@ -34,7 +34,7 @@ import HelloWorld from './components/HelloWorld.vue'
       ☁️ ClimaClean
     </p>
     <P>
-      Versão 1.0/2024
+      Versão 2.0/2024
     </P>
   </footer>
   <!-- <header>
