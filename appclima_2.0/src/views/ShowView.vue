@@ -1,5 +1,24 @@
 <template>
- 
+    <section class="info-section">
+      <h1 class="title-h1" style="text-align: center">
+        Previsão do Tempo Joinville - SC
+      </h1>
+      <div class="new-box" style="text-align: center">
+        <span class="hour">10:50</span>
+        <div class="info-display">
+          <div class="temperatura">
+            <p class="temp">21°C</p>
+            <img class="img-previsao" alt="icone-info-tempo"
+              src="https://cdn.weatherapi.com/weather/64x64/night/389.png" />
+            <p class="texto-previsao">Chuva-forte</p>
+          </div>
+          <div>
+            <p class="umidade">Umidade: 76%</p>
+            <p class="vento">3km/h</p>
+          </div>
+        </div>
+      </div>
+    </section>
 </template>
 
 <style>
