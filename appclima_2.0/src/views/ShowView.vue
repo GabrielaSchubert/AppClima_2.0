@@ -1,4 +1,24 @@
 <template>
+  <header>
+    <h2><a href="index.html" class="logo">☁️ ClimaClean</a></h2>
+  <!--  <div class="input">
+      <input class="input-cidad" type="text" id="cityinput"
+        placeholder="Digite o nome da cidade que deseja ver o clima:">
+        <button class="botao-busca" onclick="botaoShow()">
+          <img
+            class="img-busca"
+            alt="buscar"
+            src="https://www.svgrepo.com/show/488200/find.svg"
+          />
+        </button>
+    </div> -->
+    <nav class="nav">
+      <a href="../src/../views/AboutView.vue" target="_blank">About the app</a>
+      <span> | </span>
+      <a href="https://github.com/Jkvua/AppClima" target="_blank">Project Github</a>
+    </nav>
+  </header>
+
     <section class="info-section">
       <h1 class="title-h1" style="text-align: center">
         Previsão do Tempo Joinville - SC
