@@ -29,7 +29,14 @@ import HelloWorld from './components/HelloWorld.vue'
     </nav>
     </header>
     <RouterView />
-  </div>
+  </div>  <footer>
+    <p>
+      ☁️ ClimaClean
+    </p>
+    <P>
+      Versão 1.0/2024
+    </P>
+  </footer>
 </template>
 
 <style scoped>
@@ -84,5 +91,13 @@ header:nth-child(1) {
         grid-template-rows: 1fr 1fr 1fr;
         align-items: center;
     }
+}
+/* Footer */
+footer {
+    grid-area: footer;
+    background-color: var(--corPrimaria);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 </style>
