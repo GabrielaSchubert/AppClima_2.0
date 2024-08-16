@@ -19,7 +19,7 @@ import {RouterLink, RouterView} from vue-router
             O app recebeu o nome de ClimaClean, que significa: clima limpo, ou seja, o intuito do site é que os usuários possam ter acesso a informação sobre o clima de forma limpa, sem problemas e sem demora.
         </p>
         <p>
-            Essa é a versão 1.0 do projeto no ano de 2024.
+            Essa é a versão 2.0 do projeto no ano de 2024.
         </p>
         <p>
             O projeto <strong>ClimaClean</strong> foi desenvolvido por: Camila, Gabriela, José Victor, Otávio e Sidiclei. Alunos do curso Sistemas Da Informação do Instituto Federal Catarinense - IFC.
