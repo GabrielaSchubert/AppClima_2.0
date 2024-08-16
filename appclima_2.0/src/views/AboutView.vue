@@ -25,7 +25,7 @@
             O projeto <strong>ClimaClean</strong> foi desenvolvido por: Camila, Gabriela, José Victor, Otávio e Sidiclei. Alunos do curso Sistemas Da Informação do Instituto Federal Catarinense - IFC.
         </p>
         <p>
-            Saiba mais sobre no <a target="_blank" href="https://github.com/Jkvua/AppClima">Github do projeto</a>.
+            Saiba mais sobre no <a target="_blank" href="https://github.com/GabrielaSchubert/AppClima_2.0.git">Github do projeto</a>.
         </p>
     </main>
 </template>

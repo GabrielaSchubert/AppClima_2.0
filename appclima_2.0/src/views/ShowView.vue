@@ -15,7 +15,7 @@
     <nav class="nav">
       <a href="../src/../views/AboutView.vue" target="_blank">About the app</a>
       <span> | </span>
-      <a href="https://github.com/Jkvua/AppClima" target="_blank">Project Github</a>
+      <a href="https://github.com/GabrielaSchubert/AppClima_2.0.git" target="_blank">Project Github</a>
     </nav>
   </header>
 
