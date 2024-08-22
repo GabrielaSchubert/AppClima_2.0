@@ -39,29 +39,258 @@
         </div>
       </div>
     </section>
-    <!-- <ul class="days-list">
-      <li>
-        <img class="imagem1" src="https://cdn.weatherapi.com/weather/64x64/night/113.png" alt="imagem-temp" />
-        <span class="day1"></span>
-        <span class="day-tamp1">23C°</span>
-        <span class="day-tamp1-min">23C°</span>
-      </li>
-      <li>
-        <img class="imagem2" src="https://cdn.weatherapi.com/weather/64x64/night/113.png" alt="imagem-temp" />
-        <span class="day2"></span>
-        <span class="day-tamp2">23C°</span>
-        <span class="day-tamp2-min">23C°</span>
-      </li>
-      <li>
-        <img class="imagem3" src="https://cdn.weatherapi.com/weather/64x64/night/113.png" alt="imagem-temp" />
-        <span class="day3"></span>
-        <span class="day-tamp3">23C°</span>
-        <span class="day-tamp3-min">23C°</span>
-      </li>
-    </ul> -->
+    
     
 </template>
 
 <style>
+    .container {
+      background: linear-gradient(#afcfeb, #f0f8ff);
+      width: 100%;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+      margin: 0 auto;
+    }
 
+    .days-list {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      margin: 10px 35px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+      border-radius: 20px;
+      background: linear-gradient(#9bcbf5, #aeb6be)
+    }
+
+    .days-list li {
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .days-list li .br {
+      margin-bottom: 5px;
+      font-size: 2rem;
+    }
+
+    .days-list li:hover {
+      transform: scale(1.1);
+      background: linear-gradient(#317abb, #91aac0);
+      color: #222831;
+      box-shadow: 0 5px 15px (0, 0, 0, 0.35);
+    }
+
+    .days-list li .day-tamp {
+      margin-top: 6px;
+      font-weight: 700;
+    }
+
+    .forecast {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .imgs-busca {
+      width: 15px;
+      color: #222831;
+      padding: 0;
+    }
+    .botabusca {
+      padding: 0;
+    }
+
+    .day {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 100px;
+    }
+
+    .info-display {
+      display: flex;
+      justify-content: space-around; /* Para distribuir os elementos ao longo da linha */
+    }  
+
+    .info-display .temp {
+      margin-right: 10px;
+      align-items: center;
+    }
+
+    .info-display .temp,
+    .info-display .img-previsao {
+      display: inline-block; /* Para alinhar verticalmente */
+      vertical-align: middle;
+    }
+    
+    .info-section {
+      padding: 2rem;
+      background: linear-gradient(#77b6e9, #e6eff7);
+      height: 300px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 30px;
+    }
+    
+    .info-section .info-display .temperatura .texto-previsao {
+      transform: translateX(-10%);
+    }
+
+    .days-list {
+      padding-inline-start: 0;
+    }
+    @media screen and (min-width: 601px) {
+      .info-section {
+        width: 600px;
+      }
+      
+    }
+
+    @media screen and (max-width: 600px) {
+      .info-section {
+        margin: 1rem; 
+      }
+      
+      .info-section .info-display  {
+        margin-top: 1rem;
+      }
+      .info-section .info-display .temperatura {
+        border-right: 1px solid gray;
+      }
+      .info-section .info-display .umidade {
+        padding-left: 1rem;
+      }
+    }    .container {
+      background: linear-gradient(#afcfeb, #f0f8ff);
+      width: 100%;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+      margin: 0 auto;
+    }
+
+    .days-list {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      margin: 10px 35px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+      border-radius: 20px;
+      background: linear-gradient(#9bcbf5, #aeb6be)
+    }
+
+    .days-list li {
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .days-list li .br {
+      margin-bottom: 5px;
+      font-size: 2rem;
+    }
+
+    .days-list li:hover {
+      transform: scale(1.1);
+      background: linear-gradient(#317abb, #91aac0);
+      color: #222831;
+      box-shadow: 0 5px 15px (0, 0, 0, 0.35);
+    }
+
+    .days-list li .day-tamp {
+      margin-top: 6px;
+      font-weight: 700;
+    }
+
+    .forecast {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .imgs-busca {
+      width: 15px;
+      color: #222831;
+      padding: 0;
+    }
+    .botabusca {
+      padding: 0;
+    }
+
+    .day {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 100px;
+    }
+
+    .info-display {
+      display: flex;
+      justify-content: space-around; /* Para distribuir os elementos ao longo da linha */
+    }  
+
+    .info-display .temp {
+      margin-right: 10px;
+      align-items: center;
+    }
+
+    .info-display .temp,
+    .info-display .img-previsao {
+      display: inline-block; /* Para alinhar verticalmente */
+      vertical-align: middle;
+    }
+    
+    .info-section {
+      padding: 2rem;
+      background: linear-gradient(#77b6e9, #e6eff7);
+      height: 300px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 30px;
+    }
+    
+    .info-section .info-display .temperatura .texto-previsao {
+      transform: translateX(-10%);
+    }
+
+    .days-list {
+      padding-inline-start: 0;
+    }
+    @media screen and (min-width: 601px) {
+      .info-section {
+        width: 600px;
+      }
+      
+    }
+
+    @media screen and (max-width: 600px) {
+      .info-section {
+        margin: 1rem; 
+      }
+      
+      .info-section .info-display  {
+        margin-top: 1rem;
+      }
+      .info-section .info-display .temperatura {
+        border-right: 1px solid gray;
+      }
+      .info-section .info-display .umidade {
+        padding-left: 1rem;
+      }
+    }
 </style>
