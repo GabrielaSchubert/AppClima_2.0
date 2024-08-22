@@ -23,7 +23,7 @@ onMounted(() => {
     
 <template>
   <main>
-    <div class="container principal">
+    <div class="container-principal">
       <a>
         
       </a>
@@ -102,3 +102,10 @@ onMounted(() => {
     <RouterView />
   </div>
 </template>
+
+<!-- <style scoped>
+  .container-principal {
+    align-items: center;
+  }
+
+</style> -->
