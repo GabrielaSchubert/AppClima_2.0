@@ -7,7 +7,7 @@
     <header>
 
       <!-- <RouterLink to="/"></RouterLink> -->
-      <h2><a href="../App.vue"></a></h2>
+      <RouterLink :to="{ name: '/' }"></RouterLink> |
     </header>
 
     <main>

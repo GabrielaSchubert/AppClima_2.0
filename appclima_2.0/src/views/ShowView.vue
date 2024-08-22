@@ -1,24 +1,4 @@
 <template>
-  <header>
-    <h2><a href="index.html" class="logo">☁️ ClimaClean</a></h2>
-  <!--  <div class="input">
-      <input class="input-cidad" type="text" id="cityinput"
-        placeholder="Digite o nome da cidade que deseja ver o clima:">
-        <button class="botao-busca" onclick="botaoShow()">
-          <img
-            class="img-busca"
-            alt="buscar"
-            src="https://www.svgrepo.com/show/488200/find.svg"
-          />
-        </button>
-    </div> -->
-    <nav class="nav">
-      <a href="../src/../views/AboutView.vue" target="_blank">About the app</a>
-      <span> | </span>
-      <a href="https://github.com/GabrielaSchubert/AppClima_2.0.git" target="_blank">Project Github</a>
-    </nav>
-  </header>
-
     <section class="info-section">
       <h1 class="title-h1" style="text-align: center">
         Previsão do Tempo Joinville - SC
@@ -28,8 +8,8 @@
         <div class="info-display">
           <div class="temperatura">
             <p class="temp">21°C</p>
-            <img class="img-previsao" alt="icone-info-tempo"
-              src="https://cdn.weatherapi.com/weather/64x64/night/389.png" />
+            <!-- <img class="img-previsao" alt="icone-info-tempo"
+              src="https://cdn.weatherapi.com/weather/64x64/night/389.png" /> -->
             <p class="texto-previsao">Chuva-forte</p>
           </div>
           <div>
@@ -44,6 +24,23 @@
 </template>
 
 <style>
+
+.info-section {
+    height: 100vh;
+    margin: 0;
+    background-color: var(--fundo);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+
+
+
+
+  
+  
     .container {
       background: linear-gradient(#afcfeb, #f0f8ff);
       width: 100%;
@@ -117,7 +114,7 @@
 
     .info-display {
       display: flex;
-      justify-content: space-around; /* Para distribuir os elementos ao longo da linha */
+      justify-content: space-around; 
     }  
 
     .info-display .temp {
@@ -127,7 +124,7 @@
 
     .info-display .temp,
     .info-display .img-previsao {
-      display: inline-block; /* Para alinhar verticalmente */
+      display: inline-block; 
       vertical-align: middle;
     }
     
@@ -168,7 +165,9 @@
       .info-section .info-display .umidade {
         padding-left: 1rem;
       }
-    }    .container {
+    }    
+    
+    .container {
       background: linear-gradient(#afcfeb, #f0f8ff);
       width: 100%;
       height: 40vh;
@@ -241,7 +240,7 @@
 
     .info-display {
       display: flex;
-      justify-content: space-around; /* Para distribuir os elementos ao longo da linha */
+      justify-content: space-around; 
     }  
 
     .info-display .temp {
@@ -251,7 +250,7 @@
 
     .info-display .temp,
     .info-display .img-previsao {
-      display: inline-block; /* Para alinhar verticalmente */
+      display: inline-block; 
       vertical-align: middle;
     }
     
@@ -292,5 +291,5 @@
       .info-section .info-display .umidade {
         padding-left: 1rem;
       }
-    }
+    } 
 </style>
