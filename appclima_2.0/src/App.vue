@@ -6,7 +6,7 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <div id="layout">
     <header>
-      <h2><a href="index.html" class="logo">☁️ ClimaClean</a></h2>
+      <RouterLink :to="{ name: 'home' }" class="logo">☁️ ClimaClean</RouterLink>
       <div class="input">
         <input class="input-cidade"
           type="text"
@@ -42,7 +42,7 @@ import HelloWorld from './components/HelloWorld.vue'
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: rgb(0, 0, 0);
 }
 
 /* Cabeçalho */
@@ -56,7 +56,7 @@ header {
 
 header .logo {
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 24px;
 }
 
@@ -90,12 +90,12 @@ header .logo {
 
 .nav a, .nav span {
   font-weight: bold;
-  color: rgb(5, 11, 48);
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
 .nav a.router-link-exact-active {
-  color: #2c1580;
+  color: rgb(0, 0, 0);
 }
 
 /* Footer */
@@ -106,7 +106,7 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 15px 0;
-  color: rgb(6, 24, 100);
+  color: rgb(0, 0, 0);
   text-align: center;
 }
 
