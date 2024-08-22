@@ -6,7 +6,7 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <div id="layout">
     <header>
-      <h2><a href="index.html" class="logo">☁️ ClimaClean</a></h2>
+      <RouterLink :to="{ name: 'home' }" class="logo">☁️ ClimaClean</RouterLink>
       <div class="input">
         <input class="input-cidade"
           type="text"

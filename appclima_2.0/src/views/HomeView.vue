@@ -1,5 +1,22 @@
 <script setup>
 // import TheWelcome from '../components/TheWelcome.vue'
+import { ref, onMounted } from 'vue'
+import WeatherServices from '@/services/WeatherServices';
+
+const weatherData = ref(null)
+onMounted(() => {
+  WeatherServices.getWeather()
+    .then((response) => {
+      weatherData.value = response.data
+
+      console.log(weatherData)
+      
+
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
 </script>
 
 
@@ -13,13 +30,18 @@
       <div class="media-box">
         <div class="info">
           <div>
+            <RouterLink :to="{ name: 'show' }" id="link-cidade">
+              <h2 class="cidade">
+                Tempo em São Paulo
+             </h2>
+            </RouterLink>
             <a id="link-cidade" href="../paginas/show.html?cidade=Sao Paulo" style="text-decoration: none;">
               <h2 class="cidade">
                 Tempo em São Paulo
              </h2>
             </a>
             
-            <p class="pais">Brasil</p>
+            <p class="pais">São Paulo</p>
             <p class="dataHora"> Dia: 9/04/2024
               horas: 9:14
             </p>
