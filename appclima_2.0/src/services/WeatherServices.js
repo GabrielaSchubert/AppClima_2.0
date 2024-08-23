@@ -24,5 +24,6 @@ export default {
         document.querySelector('.texto-previsao').innerHTML = d.current.condition.text
         document.querySelector('.img-previsao').src = "https:" + d.current.condition.icon
         document.querySelector('.temp').innerHTML = d.current.temp_c + "°"
+        document.querySelector('.vento').innerHTML = d.current.wind_kph + "km/h"
     }
 }

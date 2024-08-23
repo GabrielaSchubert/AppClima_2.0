@@ -1,11 +1,40 @@
+<script setup>
+  import { ref, onMounted } from 'vue'
+  import WeatherServices from '@/services/WeatherServices'; 
+  
+
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+  
+  let local = params.local
+
+  console.log(local)
+  const weatherData = ref(null)
+  onMounted(() => {
+    WeatherServices.getWeather(local)
+      .then((response) => {
+        weatherData.value = response.data
+        if (weatherData != null) {
+          console.log(weatherData.value)
+          WeatherServices.displayData(weatherData)
+        }
+      
+
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  })
+</script>
 <template>
   <section class="grade-grande">
     <section class="info-section">
-      <h1 class="title-h1" style="text-align: center">
+      <h1 class="cidade" style="text-align: center">
         Previsão do Tempo Joinville - SC
       </h1>
       <div class="new-box" style="text-align: center">
-        <span class="hour">10:50</span>
+        <span class="dataHora">10:50</span>
         <div class="info-display">
           <div class="temperatura">
             <p class="temp">21°C</p>
