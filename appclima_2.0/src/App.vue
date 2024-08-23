@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -115,7 +115,7 @@ import HelloWorld from './components/HelloWorld.vue'
     margin: 5px 0;
   }
 
-  /* Responsividade */
+/*   
   @media screen and (min-width: 601px) {
     header {
       display: grid;
@@ -138,5 +138,5 @@ import HelloWorld from './components/HelloWorld.vue'
     .input {
       justify-content: center;
     }
-  }
+  } */
   </style>

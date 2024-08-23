@@ -129,7 +129,7 @@
     .days-list {
       padding-inline-start: 0;
     }
-     @media screen and (min-width: 601px) {
+     /* @media screen and (min-width: 601px) {
       .info-section {
         width: 600px;
       }
@@ -150,5 +150,5 @@
       .info-section .info-display .umidade {
         padding-left: 1rem;
       }
-    }    
+    }     */
 </style>
