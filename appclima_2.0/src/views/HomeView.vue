@@ -73,31 +73,6 @@ onMounted(() => {
     </div>
   </main>
 
-
-      <div class="home-demo"> </div>
-      <div class="owl-carousel owl-theme"> </div>
-
-
-  <div id="layout">
-    <header>
-      <div class="wrapper">
-        <nav>
-          <RouterLink :to="{ name: 'show' }">Porto Alegre</RouterLink> |
-          <RouterLink :to="{ name: 'show' }">São Paulo</RouterLink> |
-          <RouterLink :to="{ name: 'show' }">Rio de Janeiro</RouterLink> |
-          <RouterLink :to="{ name: 'show' }">Brasilia</RouterLink> |
-          <RouterLink :to="{ name: 'show' }">Salvador</RouterLink> |
-          <RouterLink :to="{ name: 'show' }">Joinville</RouterLink> |
-          <RouterLink :to="{ name: 'show' }">Belo Horizonte</RouterLink> |
-          <RouterLink :to="{ name: 'show' }">Curitiba</RouterLink> |
-          <RouterLink :to="{ name: 'show' }">Recife</RouterLink> |
-          <RouterLink :to="{ name: 'show' }">Guarulhos</RouterLink> |
-          <RouterLink :to="{ name: 'show' }">Araquari</RouterLink> |
-        </nav>
-      </div>
-    </header>
-    <RouterView />
-  </div>
 </template>
 
 <!-- <style scoped>

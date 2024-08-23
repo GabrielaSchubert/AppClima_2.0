@@ -23,6 +23,7 @@ import { RouterLink, RouterView } from 'vue-router'
       </div>
       <nav class="nav">
         <RouterLink :to="{ name: 'about' }">Sobre o app</RouterLink>
+        <span> | </span>
         <RouterLink :to="{ name: 'show' }">Show</RouterLink>
         <span> | </span>
         <a href="https://github.com/Jkvua/AppClima" target="_blank">Github do projeto</a>
