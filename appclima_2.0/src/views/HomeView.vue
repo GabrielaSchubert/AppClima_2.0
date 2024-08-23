@@ -9,7 +9,9 @@ onMounted(() => {
     .then((response) => {
       weatherData.value = response.data
 
-      WeatherServices.displayData(weatherData)
+      if (weatherData != null) {
+        WeatherServices.displayData(weatherData)
+      }
       
 
     })
