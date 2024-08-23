@@ -32,7 +32,7 @@ onMounted(() => {
       <div class="media-box">
         <div class="info">
           <div>
-            <RouterLink :to="{ name: 'show' }" id="link-cidade">
+            <RouterLink :to="{ name: 'show', query: { local: 'Sao Paulo'} }" id="link-cidade">
               <h2 class="cidade">
                 Tempo em São Paulo
               </h2>

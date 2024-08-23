@@ -50,7 +50,6 @@ import { RouterLink, RouterView } from 'vue-router'
   /* Cabeçalho */
   header {
     background-color: rgb(153, 203, 245);
-    border-radius: 10px;
     display: flex;
     justify-content: space-between; /* Alinha logo e navegação */
     align-items: center;
@@ -108,7 +107,8 @@ import { RouterLink, RouterView } from 'vue-router'
     width: 100%;
     display: flex;
     justify-content: space-around;
-    border-radius: 10px;
+    position: fixed;
+    bottom: 0;
 }
 
   footer p {
