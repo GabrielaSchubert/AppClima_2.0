@@ -38,13 +38,13 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
 
-  #layout {
+  /* #layout {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    align-items: center;
+    align-items:normal;
     color: #2c3e50;
-  }
+  } */
 
   /* Cabeçalho */
   header {
@@ -57,7 +57,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
   header .logo {
     text-decoration: none;
-    color: white;
+    color: rgb(5, 11, 48);
     font-size: 24px;
   }
 
@@ -102,13 +102,15 @@ import { RouterLink, RouterView } from 'vue-router'
   /* Footer */
   footer {
     background-color: var(--corPrimaria);
-    width: 100%;
+    /* width: 100%; */
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     align-items: center;
     padding: 15px 0;
     color: rgb(6, 24, 100);
     text-align: center;
+    margin: auto;
+    padding: auto;
   }
 
   footer p {

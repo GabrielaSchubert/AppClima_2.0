@@ -38,8 +38,10 @@
         <div class="info-display">
           <div class="temperatura">
             <p class="temp">21°C</p>
-            <!-- <img class="img-previsao" alt="icone-info-tempo"
-              src="https://cdn.weatherapi.com/weather/64x64/night/389.png" /> -->
+            <img class="img-previsao"
+              alt="icone-info-tempo"
+              src="https://cdn.weatherapi.com/weather/64x64/night/389.png"
+            />
             <p class="texto-previsao">Chuva-forte</p>
           </div>
           <div>
@@ -50,7 +52,26 @@
       </div>
     </section>
   </section>
-    
+  <ul class="days-list">
+      <li>
+        <img class="imagem1" src="https://cdn.weatherapi.com/weather/64x64/night/113.png" alt="imagem-temp" />
+        <span class="day1"></span>
+        <span class="day-tamp1">23C°</span>
+        <span class="day-tamp1-min">23C°</span>
+      </li>
+      <li>
+        <img class="imagem2" src="https://cdn.weatherapi.com/weather/64x64/night/113.png" alt="imagem-temp" />
+        <span class="day2"></span>
+        <span class="day-tamp2">23C°</span>
+        <span class="day-tamp2-min">23C°</span>
+      </li>
+      <li>
+        <img class="imagem3" src="https://cdn.weatherapi.com/weather/64x64/night/113.png" alt="imagem-temp" />
+        <span class="day3"></span>
+        <span class="day-tamp3">23C°</span>
+        <span class="day-tamp3-min">23C°</span>
+      </li>
+    </ul>
 </template>
 
 <style>
