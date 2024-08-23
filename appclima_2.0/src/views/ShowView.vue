@@ -26,21 +26,27 @@
 
 <style>
 
-  .info-section {
-      left: 200vh;
-      height: 300px;
-      max-width: 600px;
-      padding: 2rem;
-      margin: auto;
-      background-color: var(--fundo);
-      background: linear-gradient(#77b6e9, #e6eff7);
-      border-radius: 30px;
-      /* display: block; */
-      /* flex-direction: column; */
-      justify-content: center;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-    } 
- 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    section .info-section {
+        margin-left: auto;
+        height: 300px;
+        max-width: 600px;
+        padding: 2rem;
+        margin-right: auto;
+        background-color: var(--fundo);
+        background: linear-gradient(#77b6e9, #e6eff7);
+        border-radius: 30px;
+        display: block; 
+        flex-direction: column;
+        justify-content: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      } 
+  
     .days-list {
       display: flex;
       justify-content: space-evenly;
