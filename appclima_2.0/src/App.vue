@@ -48,7 +48,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
   /* Cabeçalho */
   header {
-    background-color: var(--corPrimaria);
+    background-color: rgb(153, 203, 245);
+    border-radius: 10px;
     display: flex;
     justify-content: space-between; /* Alinha logo e navegação */
     align-items: center;
@@ -101,23 +102,19 @@ import { RouterLink, RouterView } from 'vue-router'
 
   /* Footer */
   footer {
-    background-color: var(--corPrimaria);
-    /* width: 100%; */
+    grid-area: footer;
+    background-color: rgb(153, 203, 245);
+    width: 100%;
     display: flex;
-    flex-direction:row;
-    align-items: center;
-    padding: 15px 0;
-    color: rgb(6, 24, 100);
-    text-align: center;
-    margin: auto;
-    padding: auto;
-  }
+    justify-content: space-around;
+    border-radius: 10px;
+}
 
   footer p {
-    margin: 5px 0;
+    margin: 10px 0;
   }
 
-/*   
+ 
   @media screen and (min-width: 601px) {
     header {
       display: grid;
@@ -140,5 +137,5 @@ import { RouterLink, RouterView } from 'vue-router'
     .input {
       justify-content: center;
     }
-  } */
+  } 
   </style>
