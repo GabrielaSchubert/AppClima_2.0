@@ -4,12 +4,6 @@
 
 
 <template>
-    <header>
-
-      <!-- <RouterLink to="/"></RouterLink> -->
-      <RouterLink :to="{ name: '/' }"></RouterLink> |
-    </header>
-
     <main>
       <h1>Sobre o App</h1>
       <p>
