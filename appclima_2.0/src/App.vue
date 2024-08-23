@@ -30,6 +30,7 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav>
     </header>
     <RouterView />
+    
     <footer>
       <p>☁️ ClimaClean</p>
       <p>Versão 2.0/2024</p>
