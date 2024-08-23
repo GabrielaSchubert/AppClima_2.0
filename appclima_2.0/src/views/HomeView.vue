@@ -5,11 +5,11 @@ import WeatherServices from '@/services/WeatherServices';
 
 const weatherData = ref(null)
 onMounted(() => {
-  WeatherServices.getWeather()
+  WeatherServices.getWeather('Sao Paulo')
     .then((response) => {
       weatherData.value = response.data
 
-      console.log(weatherData)
+      WeatherServices.displayData(weatherData)
       
 
     })
@@ -33,13 +33,8 @@ onMounted(() => {
             <RouterLink :to="{ name: 'show' }" id="link-cidade">
               <h2 class="cidade">
                 Tempo em São Paulo
-             </h2>
+              </h2>
             </RouterLink>
-            <a id="link-cidade" href="../paginas/show.html?cidade=Sao Paulo" style="text-decoration: none;">
-              <h2 class="cidade">
-                Tempo em São Paulo
-             </h2>
-            </a>
             
             <p class="pais">São Paulo</p>
             <p class="dataHora"> Dia: 9/04/2024
