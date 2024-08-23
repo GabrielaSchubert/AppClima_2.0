@@ -22,7 +22,7 @@ import HelloWorld from './components/HelloWorld.vue'
         </button>
       </div>
       <nav class="nav">
-        <RouterLink :to="{ name: 'about' }">sobre o app</RouterLink>
+        <RouterLink :to="{ name: 'about' }">Sobre o app</RouterLink>
         <RouterLink :to="{ name: 'show' }">Show</RouterLink>
         <span> | </span>
         <a href="https://github.com/Jkvua/AppClima" target="_blank">Github do projeto</a>
@@ -31,7 +31,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <RouterView />
     <footer>
       <p>☁️ ClimaClean</p>
-      <p>Versão 1.0/2024</p>
+      <p>Versão 2.0/2024</p>
     </footer>
   </div>
 </template>
