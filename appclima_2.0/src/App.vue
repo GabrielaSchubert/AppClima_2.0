@@ -24,8 +24,6 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav class="nav">
         <RouterLink :to="{ name: 'about' }">Sobre o app</RouterLink>
         <span> | </span>
-        <RouterLink :to="{ name: 'show' }">Show</RouterLink>
-        <span> | </span>
         <a href="https://github.com/Jkvua/AppClima" target="_blank">Github do projeto</a>
       </nav>
     </header>
@@ -49,30 +47,47 @@ import { RouterLink, RouterView } from 'vue-router'
   } */
 
   /* Cabeçalho */
-  header {
-    background-color: rgb(153, 203, 245);
+  header { 
     display: flex;
-    justify-content: space-between; /* Alinha logo e navegação */
+    justify-content: space-between; 
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 20px; 
+    grid-area: header;
+    background-color: rgb(153, 203, 245);
   }
 
   header .logo {
     text-decoration: none;
-    color: rgb(5, 11, 48);
     font-size: 24px;
+    text-decoration: none;
+    color: white;
   }
+
+  header:nth-child(1) {
+    text-align: center;
+}
 
   /* Formulário de Busca */
   .input {
     display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    
+    color: hsla(0, 0%, 0%, 0.966);
+    width: calc(100% - 100%);
   }
 
   .input-cidade {
-    padding: 8px;
-    margin-right: 10px;
+    background-color: #b3ccec;
+    padding: 10px;
+    outline: none;
+    border-radius: 15px;
+    
   }
 
   .botao-busca {
