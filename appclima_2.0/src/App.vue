@@ -38,6 +38,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
 
+
+  
   /* #layout {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -68,7 +70,7 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
   /* Formulário de Busca */
-  .input {
+  /* .input {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,19 +82,28 @@ import { RouterLink, RouterView } from 'vue-router'
     
     color: hsla(0, 0%, 0%, 0.966);
     width: calc(100% - 100%);
-  }
+  } */
 
-  .input-cidade {
-    background-color: #b3ccec;
-    padding: 10px;
+  .input-cidade, .input-cidad {
+    border: none;
     outline: none;
+    padding: 10px;
     border-radius: 15px;
+    font-size: 15px;
+    background-color: #b3ccec;
+    color: hsla(0, 0%, 0%, 0.966);
+    width: calc(100% - 100px);
     
   }
 
-  .botao-busca {
-    background-color: transparent;
+  .botao-busca, .butao {
+    background-color: #b3ccec;
     border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    float: right;
   }
 
   .img-busca {

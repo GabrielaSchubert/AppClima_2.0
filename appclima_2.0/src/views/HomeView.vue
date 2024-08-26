@@ -44,7 +44,7 @@ onMounted(() => {
             </p>
           </div>
           <div>
-            <p class="umidade clima">Umidade: 76%</p>
+            <p class="umidade-clima">Umidade: 76%</p>
           </div>
         </div>
         <div class="info clima">
@@ -75,9 +75,38 @@ onMounted(() => {
 
 </template>
 
-<!-- <style scoped>
-  .container-principal {
+ <style scoped>
+
+ main {
+  grid-area: main;
+ }
+
+  main div.container-principal .media-box {
+    /* transform: scale(1.1);  */
+    background: linear-gradient(#317abb, #91aac0);
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
+    text-align: center;
   }
 
-</style> -->
+  main div.container-principal .media-box .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem 0;
+}
+
+main div.container-principal .media-box .info {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem 1rem 0.4rem;
+    border-left: 1px solid gray;
+    margin: 0.4rem
+}
+
+</style> 
