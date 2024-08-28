@@ -17,8 +17,9 @@ const router = createRouter({
       component: AboutView
     },
     {
-      path: '/show',
+      path: '/show/:local',
       name: 'show',
+      props: true,
       component: ShowView
     }
   ]

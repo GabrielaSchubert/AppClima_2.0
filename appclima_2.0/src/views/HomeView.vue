@@ -2,14 +2,40 @@
 // import TheWelcome from '../components/TheWelcome.vue'
 import { ref, onMounted } from 'vue'
 import WeatherServices from '@/services/WeatherServices'
+import router from '@/router';
 
 const weatherData = ref(null)
 onMounted(() => {
+  function clicaNoBotao(lugar) {
+    WeatherServices.getWeather(lugar)
+    .then((response) => {
+      weatherData.value = response.data
+
+      if (weatherData.value != null) {
+        router.push({ name: 'show', params: { local: weatherData.value.location.name } })
+      }
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  }
+
+  const node = document.getElementById("cityinput");
+        node.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                if (document.getElementById('cityinput').value != null) {
+                  clicaNoBotao(document.getElementById('cityinput').value)
+                }
+            }
+  })
+  const botao = document.querySelector('.botao-busca')
+  botao.onclick = function() { clicaNoBotao(document.getElementById('cityinput').value) }
+
   WeatherServices.getWeather('Sao Paulo')
     .then((response) => {
       weatherData.value = response.data
 
-      if (weatherData != null) {
+      if (weatherData.value != null) {
         WeatherServices.displayData(weatherData)
       }
     })
@@ -28,7 +54,7 @@ onMounted(() => {
       <div class="media-box">
         <div class="info">
           <div>
-            <RouterLink :to="{ name: 'show', query: { local: 'Sao Paulo' } }" id="link-cidade">
+            <RouterLink :to="{ name: 'show',params: {local: 'Sao+Paulo'} }" id="link-cidade">
               <h2 class="cidade">Tempo em São Paulo</h2>
             </RouterLink>
 

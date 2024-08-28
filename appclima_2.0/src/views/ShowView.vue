@@ -1,16 +1,50 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import WeatherServices from '@/services/WeatherServices'
+import router from '@/router';
 
-const params = new Proxy(new URLSearchParams(window.location.search), {
-  get: (searchParams, prop) => searchParams.get(prop)
+const props = defineProps({
+  local: { required: true }
 })
 
-let local = params.local
+
+let local = props.local
 
 const weatherData = ref(null)
 const forecast = ref(null)
 onMounted(() => {
+  function clicaNoBotao(lugar) {
+    WeatherServices.getWeather(lugar)
+    .then((response) => {
+      weatherData.value = response.data
+      if (weatherData.value != null) {
+        router.push({ name: 'show', params: { local: weatherData.value.location.name } })
+        WeatherServices.displayDataShow(weatherData)
+      }
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+    WeatherServices.getForecast(lugar)
+    .then((response) => {
+      forecast.value = response.data
+      if (forecast.value != null) {
+        WeatherServices.displayForecast(forecast)
+      } 
+    })
+  }
+
+  const node = document.getElementById("cityinput");
+        node.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                if (document.getElementById('cityinput').value != null) {
+                  clicaNoBotao(document.getElementById('cityinput').value)
+                }
+            }
+  })
+  const botao = document.querySelector('.botao-busca')
+  botao.onclick = function() { clicaNoBotao(document.getElementById('cityinput').value) }
+
   WeatherServices.getWeather(local)
     .then((response) => {
       weatherData.value = response.data
@@ -21,12 +55,12 @@ onMounted(() => {
     .catch((error) => {
       console.log(error)
     })
+    
   WeatherServices.getForecast(local)
     .then((response) => {
       forecast.value = response.data
-      if (forecast.value != null) {
-        console.log(forecast.value)
-        WeatherServices.displayForecast(weatherData)
+      if (forecast.value != null) { 
+        WeatherServices.displayForecast(forecast)
       } 
     })
 })
@@ -76,9 +110,9 @@ onMounted(() => {
         src="https://cdn.weatherapi.com/weather/64x64/night/113.png"
         alt="imagem-temp"
       />
-      <span class="day2"></span>
-      <span class="day-tamp2">23C°</span>
-      <span class="day-tamp2-min">23C°</span>
+      <span class="dia2"></span>
+      <span class="dia2-temp">23C°</span>
+      <span class="dia2-temp-min">23C°</span>
     </li>
     <li>
       <img
@@ -86,9 +120,9 @@ onMounted(() => {
         src="https://cdn.weatherapi.com/weather/64x64/night/113.png"
         alt="imagem-temp"
       />
-      <span class="day3"></span>
-      <span class="day-tamp3">23C°</span>
-      <span class="day-tamp3-min">23C°</span>
+      <span class="dia3"></span>
+      <span class="dia3-temp">23C°</span>
+      <span class="dia3-temp-min">23C°</span>
     </li>
   </ul>
 </template>
