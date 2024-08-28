@@ -93,6 +93,8 @@ import { RouterLink, RouterView } from 'vue-router'
     width: 15px;
   }
 
+ 
+
   /* Navegação */
   .nav {
     display: flex;

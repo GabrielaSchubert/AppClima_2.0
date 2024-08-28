@@ -39,7 +39,7 @@ onMounted(() => {
             <p class="umidade-clima">Umidade: 76%</p>
           </div>
         </div>
-        <div class="info clima">
+        <div class="info-clima">
           <div class="menor-box">
             <img
               class="img-previsao"
@@ -51,7 +51,7 @@ onMounted(() => {
           <p class="temp">21°C</p>
         </div>
       </div>
-        
+
     </div>
 
   </main>
@@ -59,9 +59,6 @@ onMounted(() => {
 
 <style scoped>
 
-template {
-  background-color: blue;
-}
 
 .cidade {
   color: #000000;
@@ -72,6 +69,12 @@ template {
 .media-box {
   margin-top: 19px;
 }
+
+.umidade-clima {
+    padding: 1rem;
+    background-color: #a0c0e9;
+    border-radius: 20px;
+  }
 
 main {
   display: grid;
@@ -109,12 +112,13 @@ main div.container-principal .media-box .info {
   padding: 2rem 0;
 }
 
-main div.container-principal .media-box .info {
+main div.container-principal .media-box .info-clima {
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   padding: 1rem 1rem 1rem 0.4rem;
-  border-left: 1px solid gray;
+  background-color: #a0c0e9;
   margin: 0.4rem;
-}
+  padding: 1rem;  
+  border-radius: 20px;
+} 
 </style>
