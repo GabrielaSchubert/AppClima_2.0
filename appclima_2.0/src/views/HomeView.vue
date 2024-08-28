@@ -80,12 +80,8 @@ main {
   text-align: center;
   display: block;
   max-width:100vw;
-  
-  
   padding: 6%;
-  /* border-right: 70px; */
   border-radius: 16px;
-  
   backdrop-filter: blur(11.6px);
   -webkit-backdrop-filter: blur(11.6px);
 }

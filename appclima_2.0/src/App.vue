@@ -37,8 +37,6 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-
-
   
   /* #layout {
     font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -63,28 +61,14 @@ import { RouterLink, RouterView } from 'vue-router'
     font-size: 24px;
     text-decoration: none;
     color: white;
+    margin-right: 5rem;
   }
 
   header:nth-child(1) {
     text-align: center;
 }
 
-  /* Formulário de Busca */
-  /* .input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding: 10px;
-    border: none;
-    outline: none;
-    border-radius: 15px;
-    
-    color: hsla(0, 0%, 0%, 0.966);
-    width: calc(100% - 100%);
-  } */
-
-  .input-cidade, .input-cidad {
+  .input-cidade {
     border: none;
     outline: none;
     padding: 10px;
@@ -92,11 +76,10 @@ import { RouterLink, RouterView } from 'vue-router'
     font-size: 15px;
     background-color: #b3ccec;
     color: hsla(0, 0%, 0%, 0.966);
-    width: calc(100% - 100px);
-    
+    width: calc(110% - 110px);
   }
 
-  .botao-busca, .butao {
+  .botao-busca {
     background-color: #b3ccec;
     border: none;
     outline: none;
@@ -113,8 +96,9 @@ import { RouterLink, RouterView } from 'vue-router'
   /* Navegação */
   .nav {
     display: flex;
-    align-items: center;
+    align-items:center;
     gap: 10px; /* Espaçamento entre os itens */
+    margin-left: 10rem;
   }
 
   .nav a, .nav span {
