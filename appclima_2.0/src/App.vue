@@ -54,6 +54,8 @@ import { RouterLink, RouterView } from 'vue-router'
     padding: 10px 20px; 
     grid-area: header;
     background-color: rgb(153, 203, 245);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
   }
 
   header .logo {
@@ -122,6 +124,7 @@ import { RouterLink, RouterView } from 'vue-router'
     justify-content: space-around;
     position: fixed;
     bottom: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
   footer p {

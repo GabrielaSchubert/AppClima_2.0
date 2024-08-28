@@ -87,6 +87,7 @@ main {
   border-radius: 16px;
   backdrop-filter: blur(11.6px);
   -webkit-backdrop-filter: blur(11.6px);
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .container-principal {
