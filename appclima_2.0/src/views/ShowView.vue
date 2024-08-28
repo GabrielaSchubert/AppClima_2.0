@@ -8,19 +8,26 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 
 let local = params.local
 
-console.log(local)
 const weatherData = ref(null)
+const forecast = ref(null)
 onMounted(() => {
   WeatherServices.getWeather(local)
     .then((response) => {
       weatherData.value = response.data
-      if (weatherData != null) {
-        console.log(weatherData.value)
-        WeatherServices.displayData(weatherData)
+      if (weatherData.value != null) {
+        WeatherServices.displayDataShow(weatherData)
       }
     })
     .catch((error) => {
       console.log(error)
+    })
+  WeatherServices.getForecast(local)
+    .then((response) => {
+      forecast.value = response.data
+      if (forecast.value != null) {
+        console.log(forecast.value)
+        WeatherServices.displayForecast(weatherData)
+      } 
     })
 })
 </script>
@@ -59,9 +66,9 @@ onMounted(() => {
         src="https://cdn.weatherapi.com/weather/64x64/night/113.png"
         alt="imagem-temp"
       />
-      <span class="day1"></span>
-      <span class="day-tamp1">23C°</span>
-      <span class="day-tamp1-min">23C°</span>
+      <span class="dia1"></span>
+      <span class="dia1-temp">23C°</span>
+      <span class="dia1-temp-min">23C°</span>
     </li>
     <li>
       <img
