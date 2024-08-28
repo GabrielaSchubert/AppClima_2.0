@@ -4,7 +4,7 @@
 
 
 <template>
-    <main>
+    <main class="main-principal">
       <div class="container">
         <h1>Sobre o App</h1>
         <p>
@@ -27,11 +27,18 @@
   </template>
   
   <style>
-    main {
+
+    template {
+      
+      align-items: center;
+    }
+
+    .main-principal {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh; 
+      margin-top: 120px;
+      /* height: 100vh;  */
       text-align: center;
     }
   
